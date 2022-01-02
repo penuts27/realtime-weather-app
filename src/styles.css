@@ -16,3 +16,4 @@ body {
   width: 100%;
 }
 
+@import-normalize; /* bring in normalize.css styles */
