@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import dayjs from "dayjs"
 import {findLocation} from './utils'
 import useWeatherApi from "./useWeatherApi";
 import { ThemeProvider } from "@emotion/react";
@@ -72,7 +73,7 @@ const getMoment = (locationName) => {
   );
   // 若找不到該地區回傳null
   if (!location) return null;
-  const now = new Date();
+  const now = dayjs();
   // 將當前時間已"2019-10-11"的格式顯示，待研究
   const nowDate = Intl.DateTimeFormat("zh-TW", {
     year: "numeric",
@@ -87,13 +88,13 @@ const getMoment = (locationName) => {
     location.time && location.time.find((data) => data.dataTime === nowDate);
 
   // 比較時間戳戳，若當天時間介於日出跟日落則顯示白天，反之
-  const sunriseTimestamp = new Date(
+  const sunriseTimestamp = dayjs(
     `${locationDate.dataTime} ${locationDate.sunrise}`
-  ).getTime();
-  const sunsetTimestamp = new Date(
+  ).unix();
+  const sunsetTimestamp = dayjs(
     `${locationDate.dataTime} ${locationDate.sunset}`
-  ).getTime();
-  const nowTimestamp = now.getTime();
+  ).unix();
+  const nowTimestamp = now.unix();
 
   return sunriseTimestamp <= nowTimestamp && nowTimestamp <= sunsetTimestamp
     ? "day"

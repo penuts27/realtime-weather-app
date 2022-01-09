@@ -144,7 +144,7 @@ const WeatherCard = (props) => {
         {new Intl.DateTimeFormat("zh-TW", {
           hour: "numeric",
           minute: "numeric"
-        }).format(new Date(observationTime))}
+        }).format(dayjs(observationTime))}
         {isLoading ? <LoadingIcon /> : <RedoIcon />}
       </Refresh>
       <Cog onClick={() => setCurrentPage("WeatherSetting")} />
