@@ -7,18 +7,19 @@
 ## 產品功能
 1. 使用者可以改變所在地區
 2. 使用者再次登入會記憶上次選取地區
-3. 使用者可收到即時天氣資訊，例如：溫度、氣象描述、風速、濕度、氣象icon
-4. 使用者可以動態取得最近的天氣觀測資訊
+3. 使用者可收到天氣資訊，例如：溫度、氣象描述、風速、濕度、氣象icon
+4. 使用者可以手動取得最近的天氣觀測資訊
 5. 使用者在日落之後使用會自動開啟深色模式（Dark Mode）
 
 ## 其他功能
 1. loading畫面，有選轉動畫圖示
 
 ### `npm start`
-clone 檔案後在終端機輸入 npm start ，現在，你可開啟任一瀏覽器瀏覽器輸入 http://localhost:3000 開始使用部落格1.0囉！
+clone 檔案後在終端機輸入 npm start ，現在，你可開啟任一瀏覽器瀏覽器輸入 http://localhost:3000 開始使用即時天氣app囉！
 
 ### 參考資料
 > [PJ 第 11 屆 iThome 鐵人賽](https://ithelp.ithome.com.tw/articles/10216355)
+
 > [中央氣象局開放資料平臺之資料擷取API](https://opendata.cwb.gov.tw/dist/opendata-swagger.html)
 
 
