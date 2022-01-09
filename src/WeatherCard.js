@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import dayjs from "dayjs"
 import WeatherIcon from "./WeatherIcon";
 import { ReactComponent as AirFlowIcon } from "./images/airFlow.svg";
 import { ReactComponent as RainIcon } from "./images/rain.svg";
